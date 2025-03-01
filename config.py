@@ -38,7 +38,6 @@ def autostart():
     home = os.path.expanduser("~/.config/qtile/autostart.sh")
     subprocess.run([home])
 
-
 mod = "mod4"
 terminal = guess_terminal()
 keys = [
@@ -76,6 +75,7 @@ keys = [
         desc="Toggle between split and unsplit sides of stack",
     ),
     Key([mod], "F2", lazy.spawn("floorp"), desc="Launch Floorp"),
+    Key([mod], "F3", lazy.spawn("qutebrowser"), desc="Launch Floorp"),
 
 
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
